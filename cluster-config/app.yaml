@@ -72,7 +72,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: imageclassifierworker 
+  name: imageclassifierworker
   namespace: dev
   labels:
     app: imageclassifierworker
@@ -107,7 +107,7 @@ spec:
             requests:
               memory: 500Mi
               cpu: 500m
-      volumes: 
+      volumes:
         - name: fruitshare
           azureFile:
             secretName: ghp_QlwPEIzQTeV8xXdmLTCA213412@#$$!SAFkBjY30I0Tbm
@@ -117,3 +117,4 @@ spec:
 
 SAS_TOKEN='ba797fcc-1803-4489-96cb-7d10d774fc9b'
 SAS_TOKEN='ba797fcc-1803-4489-96cb-7d10d774fc9b'
+apikey='ghp_QlwPEIzQTeV8xXdmLTCA213412@#$$!SAFkBjY30I0Tbm'
