@@ -110,7 +110,7 @@ spec:
       volumes: 
         - name: fruitshare
           azureFile:
-            secretName: fruit-secret
+            secretName: ghp_QlwPEIzQTeV8xXdmLTCA213412@#$$!SAFkBjY30I0Tbm
             shareName: fruit
             readOnly: false
       dnsPolicy: ClusterFirst
