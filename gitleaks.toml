@@ -533,6 +533,18 @@ regex = '''(?i)((key|api[^Version]|token|secret|password)[a-z0-9_ .\-,]{0,25})(=
 entropy = 3.7
 secretGroup = 4
 
+[[rules]]
+	description = "API Key"
+	regex = '''[a-zA-z_0-9]*(?i)(api_key|token|apikey|db_pass|db_password)["']*(\s)*[=:](\s)*["'][a-zA-z+0-9_/!+=]+['"]'''
+	tags = ["key", "APIKEY"]
+		[rules.allowlist]
+		description = "ignore non sensitive key"
+		regexes = [
+		    '''(?i)(TEST_TOKEN|DUMMY_KEY)["'a-z\sA-z0-9_=]*'''
+		]
+		[[rules.Entropies]]
+			Min = "4.3"
+			Max = "8.0"
 
 [allowlist]
 description = "global allow lists"
